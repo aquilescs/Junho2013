@@ -110,6 +110,19 @@ layerSwitcher.hidePanel = function() {};
 layerSwitcher.showPanel();
 
 
+    var searchLayer = new SearchLayer({
+      layer: lyr_AtosdeJunho_5,
+      colName: 'Título',
+      zoom: 10,
+      collapsed: true,
+      map: map
+    });
+
+    map.addControl(searchLayer);
+    document.getElementsByClassName('search-layer')[0]
+    .getElementsByTagName('button')[0].className +=
+    ' fa fa-binoculars';
+    
 map.getView().fit([-8014935.060013, -4105312.575402, -2917910.499802, 511615.479922], map.getSize());
 
 var NO_POPUP = 0
@@ -700,8 +713,8 @@ map.on("rendercomplete", function(evt) {
         olAttribution.innerHTML = '<a href="https://openlayers.org/">OpenLayers</a> &middot; ';
         var qgisAttribution = document.createElement('li');
         qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
- 		attributionList.insertBefore(quilcsAttribution, firstLayerAttribution);
-		attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
+		attributionList.insertBefore(quilcsAttribution, firstLayerAttribution);
+        attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
         attributionList.insertBefore(olAttribution, firstLayerAttribution);
         attributionList.insertBefore(qgisAttribution, firstLayerAttribution);
         attributionComplete = true;
