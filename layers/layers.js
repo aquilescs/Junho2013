@@ -2,7 +2,7 @@ var wms_layers = [];
 
 
         var lyr_ESRIGraydark_0 = new ol.layer.Tile({
-            'title': 'ESRI Gray (dark)',
+            'title': 'Mapa base: ESRI Gray (dark)',
             'type': 'base',
             'opacity': 1.000000,
             
@@ -90,7 +90,7 @@ var titulo = new ol.layer.Vector({
             });
 
 lyr_ESRIGraydark_0.setVisible(true);lyr_Pasescomatosemapoio_1.setVisible(true);lyr_MunicipioscomAto_2.setVisible(true);lyr_Municipioscomreduodetarifa_3.setVisible(true);lyr_AtosdeJunhoMapadeCalor_4.setVisible(false);lyr_AtosdeJunho_5.setVisible(true);
-var layersList = [lyr_ESRIGraydark_0,lyr_Pasescomatosemapoio_1,lyr_MunicipioscomAto_2,lyr_Municipioscomreduodetarifa_3,lyr_AtosdeJunhoMapadeCalor_4,lyr_AtosdeJunho_5,titulo];
+var layersList = [lyr_ESRIGraydark_0,lyr_Pasescomatosemapoio_1,lyr_MunicipioscomAto_2,lyr_Municipioscomreduodetarifa_3,lyr_AtosdeJunhoMapadeCalor_4,lyr_AtosdeJunho_5, titulo];
 lyr_Pasescomatosemapoio_1.set('fieldAliases', {'FID': 'FID', 'COUNTRY': 'País', 'ISO': 'ISO', 'COUNTRYAFF': 'COUNTRYAFF', 'AFF_ISO': 'AFF_ISO', 'SHAPE_Leng': 'SHAPE_Leng', 'SHAPE_Area': 'SHAPE_Area', 'Fonte': 'Fonte', 'EnderecoGe': 'EnderecoGe', });
 lyr_MunicipioscomAto_2.set('fieldAliases', {'CD_MUN': 'CD_MUN', 'NM_MUN': 'Cidade', 'SIGLA_UF': 'SIGLA_UF', 'AREA_KM2': 'AREA_KM2', 'Ato_link': 'Ato_link', 'Ato_Data.M': 'Ato_Data.M', 'Ato_Título': 'Ato_Título', 'Ato_Quanti': 'Ato_Quanti', 'Ato_Endere': 'Ato_Endere', 'Reduc.Muni': 'Reduc.Muni', 'Reduc.Font': 'Reduc.Font', 'AtoCidade': 'AtoCidade', 'AtoEstado': 'AtoEstado', 'AtoFonte': 'Fonte', 'AtoEnderec': 'AtoEnderec', 'Número de': 'Número de atos*', });
 lyr_Municipioscomreduodetarifa_3.set('fieldAliases', {'CD_MUN': 'CD_MUN', 'NM_MUN': 'NM_MUN', 'SIGLA_UF': 'UF', 'AREA_KM2': 'AREA_KM2', 'Ato_link': 'Ato_link', 'Ato_Data.M': 'Ato_Data.M', 'Ato_Título': 'Ato_Título', 'Ato_Quanti': 'Ato_Quanti', 'Ato_Endere': 'Ato_Endere', 'Reduc.Muni': 'Município', 'Reduc.Font': 'Fonte', });
@@ -101,7 +101,7 @@ lyr_Municipioscomreduodetarifa_3.set('fieldImages', {'CD_MUN': 'Hidden', 'NM_MUN
 lyr_AtosdeJunho_5.set('fieldImages', {'data': 'Hidden', 'Texto': 'Hidden', 'link.2.': 'Hidden', 'Fonte': 'TextEdit', 'Data.Manifestacao': 'DateTime', 'Título': 'TextEdit', 'Endereco': 'Hidden', 'Cidade': 'Hidden', 'Estado': 'Hidden', 'Quantidade.de.pessoas': 'TextEdit', 'Obs': 'Hidden', 'Latitude': 'Hidden', 'Longitude': 'Hidden', 'EnderecoGerado': 'TextEdit', 'Latitude_2': 'Hidden', 'Longitude_2': 'Hidden', });
 lyr_Pasescomatosemapoio_1.set('fieldLabels', {'COUNTRY': 'inline label', 'Fonte': 'inline label', });
 lyr_MunicipioscomAto_2.set('fieldLabels', {'NM_MUN': 'inline label', 'AtoFonte': 'inline label', 'Número de': 'inline label', });
-lyr_Municipioscomreduodetarifa_3.set('fieldLabels', {'SIGLA_UF': 'inline label', 'Reduc.Muni': 'header label', 'Reduc.Font': 'inline label', });
+lyr_Municipioscomreduodetarifa_3.set('fieldLabels', {'SIGLA_UF': 'inline label', 'Reduc.Muni': 'inline label', 'Reduc.Font': 'inline label', });
 lyr_AtosdeJunho_5.set('fieldLabels', {'Fonte': 'inline label', 'Data.Manifestacao': 'inline label', 'Título': 'inline label', 'Quantidade.de.pessoas': 'inline label', 'EnderecoGerado': 'inline label', });
 lyr_AtosdeJunho_5.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
